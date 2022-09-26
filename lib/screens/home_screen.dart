@@ -8,6 +8,7 @@ import 'package:material_design_icons_flutter/material_design_icons_flutter.dart
 import '../config/widgets/circle_button.dart';
 import '../config/widgets/create_post_container.dart';
 import '../config/widgets/rooms.dart';
+import '../config/widgets/stories.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key key}) : super(key: key);
@@ -53,7 +54,14 @@ class HomeScreen extends StatelessWidget {
                 onlineUsers: onlineUsers,
               ),
             ),
-          )
+          ),
+          SliverPadding(
+            padding: const EdgeInsets.fromLTRB(0.0, 5.0, 0.0, 5.0),
+            sliver: SliverToBoxAdapter(
+              child: Stories(currentUser: currentUser, stories: stories),
+              ),
+            ),
+
         ],
       ),
     );
