@@ -1,9 +1,9 @@
 import 'package:flutter_facebook_responsive_ui/models/models.dart';
 
 final User currentUser = User(
-  name: 'Marcus Ng',
+  name: 'Soke',
   imageUrl:
-      'https://images.unsplash.com/photo-1578133671540-edad0b3d689e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80',
+      'https://gumlet.assettype.com/afkgaming/import/media/images/50122-6c7f6f6e34f3c35c278ecf36586a3808.jpeg?w=1200&auto=format%2Ccompress&ogImage=true',
 );
 
 final List<User> onlineUsers = [
@@ -167,9 +167,9 @@ final List<Story> stories = [
 final List<Post> posts = [
   Post(
     user: currentUser,
-    caption: 'Check out these cool puppers',
+    caption: 'Lambo or Rekt',
     timeAgo: '58m',
-    imageUrl: 'https://images.unsplash.com/photo-1525253086316-d0c936c814f8',
+    imageUrl: 'https://gumlet.assettype.com/afkgaming/import/media/images/50122-6c7f6f6e34f3c35c278ecf36586a3808.jpeg?w=1200&auto=format%2Ccompress&ogImage=true',
     likes: 1202,
     comments: 184,
     shares: 96,

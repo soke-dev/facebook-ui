@@ -7,8 +7,10 @@ import 'package:material_design_icons_flutter/material_design_icons_flutter.dart
 
 import '../config/widgets/circle_button.dart';
 import '../config/widgets/create_post_container.dart';
+import '../config/widgets/post_container.dart';
 import '../config/widgets/rooms.dart';
 import '../config/widgets/stories.dart';
+import '../models/post_model.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key key}) : super(key: key);
@@ -58,10 +60,20 @@ class HomeScreen extends StatelessWidget {
           SliverPadding(
             padding: const EdgeInsets.fromLTRB(0.0, 5.0, 0.0, 5.0),
             sliver: SliverToBoxAdapter(
-              child: Stories(currentUser: currentUser, stories: stories),
+              child: Stories(
+                currentUser: currentUser,
+                stories: stories,
               ),
             ),
-
+          ),
+          SliverList(
+            delegate: SliverChildBuilderDelegate((context, index) {
+              final Post post = posts[index];
+              return PostContainer(post: post);
+            },
+            childCount: posts.length,
+            ),
+          )
         ],
       ),
     );
